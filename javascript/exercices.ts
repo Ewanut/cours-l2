@@ -10,6 +10,24 @@ const anagrammes = (stringA, stringB) => {
    * anagrams('RAIL! SAFETY!', 'fairy tales') === true
    * anagrams('Hi there', 'Bye there') === false
    */
+   var arrayA = [];
+   var arrayB = [];
+   var arrayC = [];
+
+   for (var i=0; i<stringA.length ; i++){
+     arrayA.push(stringA.charAt(i));
+   }
+
+   for (var i=0; i<stringB.length ; i++){
+     arrayB.push(stringB.charAt(i));
+   }
+
+   arrayA.forEach(function(e){
+   if(arrayB.includes(e)){
+     console.log(e);
+     arrayC.push(e);
+     }
+   })
 
 };
 

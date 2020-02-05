@@ -9,7 +9,7 @@ import step5 from './images/5.jpg';
 import step6 from './images/6.jpg';
 
 const API = 'https://api.github.com';
-const GIST = '';
+const GIST = 'https://api.github.com/gists/ba86ccb6204a07a790195e2e4409d6f5';
 const TOKEN = '';
 
 class Hangman extends Component {

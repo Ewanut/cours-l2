@@ -7,3 +7,20 @@ test('renders learn react link', () => {
   const linkElement = getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+let container = null;
+
+beforeEach( () => {
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach( () => {
+  unmountComponentAtNode(container);
+  container.remove();
+});
+
+it('renders without crashing', () => {
+  act( () => {
+    render(<App/>, container);
+  });
